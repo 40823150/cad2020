@@ -316,3 +316,110 @@
 <p>進階設定</p>
 <p><img alt="" height="403" src="https://40823145.github.io/cad2020/images/%E9%80%B2%E9%9A%8E%E5%85%A7%E5%AE%B9.png" width="582"/></p>
 <p>6.完成</p>
+<h1>ssh建立</h1>
+<p>建立公鑰(public key)</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_109741">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">打exit可以離開sh模式</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img alt="" height="184" src="https://40823125.github.io/cad2020/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202020-09-27%20200842.png" width="350"/></p>
+<p>設定儲存路徑</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_379951">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">/y(目錄名)/home(資料夾名稱)/.ssh(創建的資料夾名稱)/40823125(創建的檔案名)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img alt="" height="183" src="https://40823125.github.io/cad2020/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202020-09-27%20201119.png" width="350"/></p>
+<p>載入</p>
+<p><img alt="" height="321" src="https://40823125.github.io/cad2020/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202020-09-27%20201515.png" width="350"/></p>
+<p><img alt="" height="217" src="https://40823125.github.io/cad2020/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202020-09-27%20201601.png" width="350"/></p>
+<p>創建密鑰(private key)(ppk檔)</p>
+<p><img alt="" height="315" src="https://40823125.github.io/cad2020/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202020-09-27%20201704.png" width="350"/></p>
+<p>設定github ssh key</p>
+<p><img alt="" height="239" src="https://40823125.github.io/cad2020/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202020-09-27%20201750.png" width="350"/></p>
+<p><img alt="" height="188" src="https://40823125.github.io/cad2020/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202020-09-27%20201954.png" width="350"/></p>
+<p>設定putty</p>
+<p><img alt="" height="246" src="https://40823125.github.io/cad2020/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202020-09-27%20203300.png" width="350"/></p>
+<p>加入到.ssh中取名為comfig</p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_20679">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py plain">ProxyCommand y:</code><code class="py keyword">/</code><code class="py plain">putty</code><code class="py keyword">/</code><code class="py plain">plink.exe github.com </code><code class="py keyword">%</code><code class="py plain">h </code><code class="py keyword">%</code><code class="py plain">p</code></div>
+<div class="line number2 index1 alt1"><code class="py spaces"> </code> </div>
+<div class="line number3 index2 alt2"><code class="py plain">Host github.com</code></div>
+<div class="line number4 index3 alt1"><code class="py spaces">    </code><code class="py plain">User git</code></div>
+<div class="line number5 index4 alt2"><code class="py spaces">    </code><code class="py plain">Port </code><code class="py value">22</code></div>
+<div class="line number6 index5 alt1"><code class="py spaces">    </code><code class="py plain">Hostname github.com</code></div>
+<div class="line number7 index6 alt2"><code class="py spaces"> </code> </div>
+<div class="line number8 index7 alt1"><code class="py spaces">    </code><code class="py plain">TCPKeepAlive yes</code></div>
+<div class="line number9 index8 alt2"><code class="py spaces">    </code><code class="py plain">IdentitiesOnly yes</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>將cad2020中.git目錄下的config改為</p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_548044">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">#url = https://github.com/40823125/cad2020.git</code></div>
+<div class="line number2 index1 alt1"><code class="html spaces">    </code><code class="html plain">url = git@github.com:40823125/cad2020.git</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
